@@ -1,252 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Mohammad Usman</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Mohammad Usman</title>
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            width: 350px;
-        }
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+.container{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+width:350px;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+h2{
+text-align:center;
+margin-bottom:25px;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+.form-group{
+margin-bottom:15px;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+input{
+width:100%;
+padding:10px;
+border:1px solid #ddd;
+border-radius:5px;
+}
 
-        .switch-link {
-            text-align: center;
-            margin-top: 15px;
-        }
+button{
+width:100%;
+padding:12px;
+background:#667eea;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
 
-        .switch-link a {
-            color: blue;
-            text-decoration: none;
-        }
+.switch-link{
+text-align:center;
+margin-top:15px;
+}
 
-        .hidden {
-            display: none;
-        }
+.switch-link a{
+color:blue;
+text-decoration:none;
+}
 
-        .error {
-            color: red;
-            text-align: center;
-            margin-top: 10px;
-        }
+.hidden{
+display:none;
+}
 
-        .success {
-            color: green;
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+.error{
+color:red;
+text-align:center;
+margin-top:10px;
+}
+
+.success{
+color:green;
+text-align:center;
+margin-top:10px;
+}
+</style>
 </head>
 <body>
 
 <div class="container">
 
-    <div id="loginSection">
-        <h2>🔐 Student Login</h2>
+<!-- LOGIN -->
+<div id="loginSection">
+<h2>🔐 Student Login</h2>
 
-        <form onsubmit="handleLogin(event)">
-            <div class="form-group">
-                <input type="email" id="loginEmail" placeholder="Email" required>
-            </div>
+<form onsubmit="handleLogin(event)">
+<div class="form-group">
+<input type="email" id="loginEmail" placeholder="Email" required>
+</div>
 
-            <div class="form-group">
-                <input type="password" id="loginPassword" placeholder="Password" required>
-            </div>
+<div class="form-group">
+<input type="password" id="loginPassword" placeholder="Password" required>
+</div>
 
-            <button type="submit">Login</button>
-        </form>
+<button type="submit">Login</button>
+</form>
 
-        <p style="text-align:center; margin-top:10px;">
-  <a href="#" onclick="resetPassword()">Forgot Password?</a>
+<p style="text-align:center; margin-top:10px;">
+<a href="#" onclick="resetPassword()">Forgot Password?</a>
 </p>
 
-        <p id="loginError" class="error"></p>
+<p id="loginError" class="error"></p>
 
-        <p class="switch-link">
-            New student?
-            <a href="#" onclick="showRegister()">Register here</a>
-        </p>
-    </div>
+<p class="switch-link">
+New student?
+<a href="#" onclick="showRegister()">Register here</a>
+</p>
+</div>
 
 
-    <div id="registerSection" class="hidden">
-        <h2>📝 Register</h2>
+<!-- REGISTER -->
+<div id="registerSection" class="hidden">
+<h2>📝 Register</h2>
 
-        <form onsubmit="handleRegister(event)">
-            <div class="form-group">
-                <input type="email" id="regEmail" placeholder="Email" required>
-            </div>
+<form onsubmit="handleRegister(event)">
+<div class="form-group">
+<input type="email" id="regEmail" placeholder="Email" required>
+</div>
 
-            <div class="form-group">
-                <input type="password" id="regPassword" placeholder="Password" required>
-            </div>
+<div class="form-group">
+<input type="password" id="regPassword" placeholder="Password" required>
+</div>
 
-            <div class="form-group">
-                <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
-            </div>
+<div class="form-group">
+<input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+</div>
 
-            <button type="submit">Register</button>
-        </form>
+<button type="submit">Register</button>
+</form>
 
-        <p id="regError" class="error"></p>
-        <p id="regSuccess" class="success"></p>
+<p id="regError" class="error"></p>
+<p id="regSuccess" class="success"></p>
 
-        <p class="switch-link">
-            Already registered?
-            <a href="#" onclick="showLogin()">Login here</a>
-        </p>
-    </div>
+<p class="switch-link">
+Already registered?
+<a href="#" onclick="showLogin()">Login here</a>
+</p>
+</div>
 
 </div>
 
 <script type="module">
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-import { 
-  getAuth, 
-  createUserWithEmailAndPassword, 
-  signInWithEmailAndPassword,
-  sendEmailVerification,
-  sendPasswordResetEmail,
-  onAuthStateChanged
+
+import {
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+sendEmailVerification,
+sendPasswordResetEmail,
+onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA5lkiDKt9lgSmKZM8m2ogYvakx2z1vol0",
-  authDomain: "usman-60738.firebaseapp.com",
-  projectId: "usman-60738",
-  storageBucket: "usman-60738.firebasestorage.app",
-  messagingSenderId: "668675134936",
-  appId: "1:668675134936:web:9e37861d957c3a35a5cead"
+apiKey: "AIzaSyA5lkiDKt9lgSmKZM8m2ogYvakx2z1vol0",
+authDomain: "usman-60738.firebaseapp.com",
+projectId: "usman-60738",
+storageBucket: "usman-60738.firebasestorage.app",
+messagingSenderId: "668675134936",
+appId: "1:668675134936:web:9e37861d957c3a35a5cead"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-onAuthStateChanged(auth, (user)=>{
-    if(user){
-        window.location.href="main.html";
-    }
+
+onAuthStateChanged(auth,(user)=>{
+if(user && user.emailVerified){
+window.location.href="main.html";
+}
 });
 
-window.showRegister = function(){
-    document.getElementById("loginSection").classList.add("hidden");
-    document.getElementById("registerSection").classList.remove("hidden");
+
+window.showRegister=function(){
+document.getElementById("loginSection").classList.add("hidden");
+document.getElementById("registerSection").classList.remove("hidden");
 }
 
-window.showLogin = function(){
-    document.getElementById("registerSection").classList.add("hidden");
-    document.getElementById("loginSection").classList.remove("hidden");
+window.showLogin=function(){
+document.getElementById("registerSection").classList.add("hidden");
+document.getElementById("loginSection").classList.remove("hidden");
 }
 
-window.handleRegister = async function(e){
-    e.preventDefault();
 
-    let email=document.getElementById("regEmail").value;
-    let pass=document.getElementById("regPassword").value;
-    let confirm=document.getElementById("regConfirmPassword").value;
+window.handleRegister=async function(e){
+e.preventDefault();
 
-    if(pass!==confirm){
-        document.getElementById("regError").textContent="Passwords do not match";
-        return;
-    }
+let email=document.getElementById("regEmail").value;
+let pass=document.getElementById("regPassword").value;
+let confirm=document.getElementById("regConfirmPassword").value;
 
-    try{
-        await createUserWithEmailAndPassword(auth,email,pass);
-        const user = auth.currentUser;
+document.getElementById("regError").textContent="";
+document.getElementById("regSuccess").textContent="";
+
+if(pass!==confirm){
+document.getElementById("regError").textContent="Passwords do not match";
+return;
+}
+
+try{
+await createUserWithEmailAndPassword(auth,email,pass);
+
+const user=auth.currentUser;
+
 await sendEmailVerification(user);
 
-document.getElementById('regSuccess').textContent =
-'Registration successful! Verify your email first.';
-        document.getElementById("regSuccess").textContent="Registration successful!";
-        setTimeout(()=>{
-            window.location.href="main.html";
-        },1000);
-    }catch(error){
-        document.getElementById("regError").textContent=error.message;
-    }
+document.getElementById("regSuccess").textContent=
+"Registration successful! Verify your email first.";
+
+}catch(error){
+document.getElementById("regError").textContent=error.message;
+}
 }
 
-window.handleLogin = async function(e){
-    e.preventDefault();
 
-    let email=document.getElementById("loginEmail").value;
-    let pass=document.getElementById("loginPassword").value;
 
-    try{
-        const userCredential =
-await signInWithEmailAndPassword(auth, email, password);
+window.handleLogin=async function(e){
+e.preventDefault();
 
-if (userCredential.user.emailVerified) {
-   window.location.href = 'main.html';
-} else {
-   document.getElementById('loginError').textContent =
-   'Pehle apna email verify karo.';
+let email=document.getElementById("loginEmail").value;
+let pass=document.getElementById("loginPassword").value;
+
+document.getElementById("loginError").textContent="";
+
+try{
+
+const userCredential=
+await signInWithEmailAndPassword(auth,email,pass);
+
+if(userCredential.user.emailVerified){
+window.location.href="main.html";
+}else{
+document.getElementById("loginError").textContent=
+"Pehle apna email verify karo.";
 }
-    }catch(error){
-       document.getElementById('loginError').textContent = error.message;
-console.log(error);
-    }
-}
-window.resetPassword = async function() {
-   const email =
-   document.getElementById('loginEmail').value.trim();
-    const password = document.getElementById('loginPassword').value;
-   if (!email) {
-      alert("Pehle email likho");
-      return;
-   }
 
-   try {
-      await sendPasswordResetEmail(auth, email);
-      alert("Send password reset to email.");
-   } catch(error) {
-      alert("Error: " + error.message);
-   }
+}catch(error){
+document.getElementById("loginError").textContent=
+error.message;
 }
+}
+
+
+
+window.resetPassword=async function(){
+
+const email=
+document.getElementById("loginEmail").value.trim();
+
+if(!email){
+alert("Pehle email likho");
+return;
+}
+
+try{
+await sendPasswordResetEmail(auth,email);
+alert("Password reset email bhej diya gaya. Inbox/Spam check karo.");
+}catch(error){
+alert(error.message);
+}
+
+}
+
 </script>
 
 </body>
