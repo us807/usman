@@ -3,51 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excel Course Files</title>
+<title>MS Excel Course - Mohammad Usman</title>
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
 body{
-  font-family:Arial,sans-serif;
-  background:#f4f4f4;
-  margin:0;
-  padding:20px;
+background:#f4f6f9;
+}
+
+header{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+background:#0d47a1;
+color:white;
+text-decoration:none;
+border-radius:6px;
 }
 
 .container{
-  max-width:900px;
-  margin:auto;
+max-width:1200px;
+margin:auto;
+padding:20px;
 }
 
-h1{
-  text-align:center;
+.title{
+text-align:center;
+margin-bottom:40px;
 }
 
-.file-box{
-  background:#fff;
-  padding:15px;
-  margin:15px 0;
-  border-radius:10px;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+padding:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card h3{
+margin-bottom:15px;
 }
 
 .download-btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 20px;
-  background:#198754;
-  color:#fff;
-  text-decoration:none;
-  border-radius:5px;
+display:inline-block;
+padding:10px 20px;
+background:#198754;
+color:white;
+text-decoration:none;
+border-radius:6px;
 }
 
 .download-btn:hover{
-  background:#146c43;
+background:#146c43;
 }
 
-.back{
-  display:inline-block;
-  margin-bottom:20px;
+footer{
+margin-top:50px;
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:15px;
 }
 
 </style>
@@ -55,40 +90,48 @@ h1{
 
 <body>
 
+<header>
+<h1>MS Excel Course Files</h1>
+</header>
+
+<a href="index.html" class="back-btn">← Back To Home</a>
+
 <div class="container">
 
-<a href="index.html" class="back">⬅ Back To Home</a>
-
-<h1>MS Excel Course Files</h1>
-
-<div class="file-box">
-  <h3>3 - Sort Option in Excel</h3>
-  <a class="download-btn"
-     href="excel/3-Sort-Option-in-Excel.xlsx"
-     download>
-     Download File
-  </a>
+<div class="title">
+<h2>Download Excel Practice Files</h2>
 </div>
 
-<div class="file-box">
-  <h3>6 - Data Validation in Excel</h3>
-  <a class="download-btn"
-     href="excel/6-Data-Validation-in-Excel.xlsx"
-     download>
-     Download File
-  </a>
+<div class="grid">
+
+<div class="card">
+<h3>3 - Sort Option in Excel</h3>
+<a href="excel/3-Sort-Option-in-Excel.xlsx" class="download-btn" download>
+Download File
+</a>
 </div>
 
-<div class="file-box">
-  <h3>7 - Conditional Formatting in Excel</h3>
-  <a class="download-btn"
-     href="excel/7-Conditional-Formatting-in-Excel.xlsx"
-     download>
-     Download File
-  </a>
+<div class="card">
+<h3>6 - Data Validation in Excel</h3>
+<a href="excel/6-Data-Validation-in-Excel.xlsx" class="download-btn" download>
+Download File
+</a>
+</div>
+
+<div class="card">
+<h3>7 - Conditional Formatting in Excel</h3>
+<a href="excel/7-Conditional-Formatting-in-Excel.xlsx" class="download-btn" download>
+Download File
+</a>
 </div>
 
 </div>
+
+</div>
+
+<footer>
+© 2026 Mohammad Usman Computer Education
+</footer>
 
 </body>
 </html>
