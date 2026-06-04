@@ -135,8 +135,16 @@ nav a{
     background:#0d47a1;
     color:white;
     text-decoration:none;
-    padding:10px 20px;
-    border-radius:6px;
+    padding:8px 20px;
+    border-radius:8px;
+}
+.vbtn{
+    display:inline-block;
+    background:#198754;
+    color:white;
+    text-decoration:none;
+    padding:8px 20px;
+    border-radius:8px;
 }
 
 /* About */
@@ -204,6 +212,18 @@ header{
     font-size:36px;
 }
 
+.card-buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.card-buttons .btn{
+    min-width:150px;
+    text-align:center;
+    margin:10px 0px;
+}
+
 }
 
 </style>
@@ -258,10 +278,17 @@ Explore Courses
 </div>
 
 <div class="card">
-<img src="image/excel.png" alt="">
-<h3>MS Excel</h3>
-<p>Basic to Advanced Excel Training.</p>
-<a href="courses.html" class="btn">View Course</a>
+    <img src="image/excel.png" alt="MS Excel">
+    <div class="card-content">
+    <h3>MS Excel</h3>
+
+    <p>Basic to Advanced Excel Training.</p>
+
+    <div class="card-buttons">
+        <a href="courses.html" class="btn">View Course</a>
+        <a href="excel-images.html" class="vbtn">View Images</a>
+    </div>
+    </div>
 </div>
 
 <div class="card">
@@ -297,7 +324,7 @@ I am a Computer Teacher and Trainer dedicated to helping students learn practica
 <h2>Contact</h2>
 
 <p>Email: yourmail@gmail.com</p>
-<p>Phone: +91 XXXXX XXXXX</p>
+<p>Phone: +91 99361 XXXXX</p>
 
 </section>
 
